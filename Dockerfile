@@ -16,4 +16,4 @@ WORKDIR /home/jenkins
 ADD jenkins-slave /usr/local/bin/jenkins-slave
 RUN chmod +x /usr/local/bin/jenkins-slave
 
-ENTRYPOINT /usr/local/bin/jenkins-slave
+ENTRYPOINT ["/usr/local/bin/jenkins-slave"]
