@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+java $JAVA_OPTS $JNLP_PROTOCOL_OPTS -cp /usr/share/jenkins/slave.jar hudson.remoting.jnlp.Main -headless "$@"
