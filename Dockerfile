@@ -14,4 +14,6 @@ RUN mkdir /home/jenkins/.jenkins
 WORKDIR /home/jenkins
 
 ADD jenkins-slave /usr/local/bin/jenkins-slave
-ENTRYPOINT ["jenkins-slave"]
+RUN chmod +x /usr/local/bin/jenkins-slave
+
+ENTRYPOINT /usr/local/bin/jenkins-slave
