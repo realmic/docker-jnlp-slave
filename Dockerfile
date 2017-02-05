@@ -13,4 +13,4 @@ RUN curl --create-dirs -sSLo /usr/share/jenkins/slave.jar https://repo.jenkins-c
 RUN mkdir /home/jenkins/.jenkins
 WORKDIR /home/jenkins
 
-CMD java $JAVA_OPTS $JNLP_PROTOCOL_OPTS -cp /usr/share/jenkins/slave.jar hudson.remoting.jnlp.Main -headless $JENKINS_TUNNEL $JENKINS_URL
+CMD java $JAVA_OPTS $JNLP_PROTOCOL_OPTS -cp /usr/share/jenkins/slave.jar hudson.remoting.jnlp.Main -headless
