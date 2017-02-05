@@ -1,2 +1,5 @@
 #!/bin/sh
-java $JAVA_OPTS $JNLP_PROTOCOL_OPTS -cp /usr/share/jenkins/slave.jar hudson.remoting.jnlp.Main -headless "$@"
+if [ ! -z "$JENKINS_URL" ]; then
+		URL="-url $JENKINS_URL"
+fi
+java $JAVA_OPTS $JNLP_PROTOCOL_OPTS -cp /usr/share/jenkins/slave.jar hudson.remoting.jnlp.Main -headless $URL "$@"
